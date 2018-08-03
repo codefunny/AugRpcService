@@ -1,0 +1,17 @@
+zookeeper:
+  server:
+    address: 127.0.0.1:2181
+  service-dir: collectpay
+  action-name: action_service
+  service-name: service-zook,${zookeeper.action-name}
+
+server:
+  port: 9087
+  tomcat:
+    min-spare-threads: 20
+    max-threads: 200
+  connection-timeout: 5000
+
+spring:
+  application:
+    name: action-gateway
